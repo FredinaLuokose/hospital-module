@@ -1,0 +1,50 @@
+<odoo>
+  <data>
+
+    <record model="ir.ui.view" id="patient_details_form_view">
+      <field name="name">patient_details_form_view</field>
+      <field name="model">patient.details</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <notebook>
+            <page string="Patient details">
+            <group>
+               <field name="name"/>
+               <field name="disease_name"/>
+              <field name="age"/>
+              <field name="appointment_id"/>
+              <field name="phone_no"/>
+              <field name="address"/>
+            </group>
+            </page>
+            </notebook>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="patient_details_tree_view">
+      <field name="name">patient_details_tree_view</field>
+      <field name="model">patient.details</field>
+      <field name="arch" type="xml">
+        <tree>
+           <field name="name"/>
+           <field name="disease_name"/>
+          <field name="age"/>
+          <field name="appointment_id"/>
+          <field name="phone_no"/>
+          <field name="address"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="patient_details_action_window">
+      <field name="name">Patients</field>
+      <field name="res_model">patient.details</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+  </data>
+</odoo>
